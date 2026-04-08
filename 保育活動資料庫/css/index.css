@@ -1,0 +1,587 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+*{
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+main {
+    height: 200%;
+    background-color: rgb(142, 206, 255);
+    text-align: center;
+}
+
+.mainView {
+    background-image: url("../13imgs/背景太陽.jpg");
+    background-size: cover; 
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+.taitle{
+    position: absolute;
+    top :20%;
+    width :100%;
+    height :10%;
+    text-align: center;
+    z-index: 1;
+    font-family: 'MantouSans-Regular';
+    font-size: 2.5em;
+}
+.part {
+    display: flex;
+    position: absolute;
+    top :30%;
+    left :0%;
+    padding-left:5%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    gap:2%;
+}
+.second{
+    display: flex;
+    position: absolute;
+    top :120%;
+    left :0%;
+    padding-left:5%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    gap:2%;
+    opacity: 0; /* 初始透明度為0 */
+    transition: opacity .3s ease, transform .3s ease; /* 加入過渡效果 */
+}
+
+.second.visible {
+    opacity: 1; /* 當元素可見時，透明度變為1 */
+}
+
+.third{
+    display: flex;
+    position: absolute;
+    top :240%;
+    left :0%;
+    padding-left:5%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    gap:2%;
+    opacity: 0; /* 初始透明度為0 */
+    transition: opacity .3s ease, transform .3s ease; /* 加入過渡效果 */
+}
+
+.third.visible {
+    opacity: 1; /* 當元素可見時，透明度變為1 */
+}
+
+.photo{
+    margin-right: 5%;
+    border-radius: 20px;
+    height:40vh;
+    width:50%;
+    background-image: url("../13imgs/觀測.jpg");
+    background-position: top right;
+    background-size: cover;
+}
+
+.picture{
+    border-radius: 20px;
+    height:40vh;
+    width:50%;
+    background-image: url("../13imgs/賞鯨志工.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.photograph{
+    margin-right: 5%;
+    border-radius: 20px;
+    height:40vh;
+    width:50%;
+    background-image: url("../13imgs/大村鯨.jpg");
+    background-position: top right;
+    background-size: cover;
+}
+
+.anime {
+    background-image: url("../13imgs/賞鯨船.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 48%;
+    height: 55%;
+    bottom: 0%;
+    left: 52%;
+    animation: whalemove 8s linear infinite;
+}
+
+.wave {
+    background-image: url("../13imgs/圖層\ 1.png");
+    background-position:bottom;
+    background-repeat:repeat-x;
+    background-size:35%;
+    position: absolute;
+    width: 100%;
+    height: 18%;
+    z-index: 2;
+    bottom: 0%;
+    animation: whalemove 15s linear infinite;
+}
+
+.whale {
+    background-image: url("../13imgs/鯨魚1.png");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    bottom: 1%;
+    left: 25%;
+    z-index: 1;
+    animation: killer 10s linear infinite;
+    transform: rotate( 8deg );
+}
+@keyframes  killer{
+    0% {
+        background-position:  left;
+    }
+    25%{
+        background-position: center;
+    }
+    50% {
+        background-position:  left;
+    }
+    75%{
+        background-position: center;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
+@keyframes whalemove {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: center;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
+
+.contents {
+    margin-top:2%;
+    height: 50%; 
+    width: 50%;
+    text-align: justify;
+    font-size: clamp(0.8rem, 1.5vw, 2em);
+    z-index: 99;
+    margin-right:5%;
+    font-family: 'GenRyuMin';
+}
+.mainData {
+    height: 100%;
+    width: 100%;    
+    /* background-image: url("../13imgs/海底.png");
+    background-size: cover;
+    background:linear-gradient(to bottom, rgb(128, 207, 240),rgb(0, 83, 119)); */
+    background-image:url("../13imgs/新海底.png"),linear-gradient(to bottom, rgb(128, 207, 240), rgb(0, 83, 119));
+    background-size: cover, cover; /* 確保兩個背景都覆蓋整個區域 */
+    background-position: bottom, center; /* 確保兩個背景都居中 */
+}
+
+.word{
+    position: absolute;
+    width :30%;
+    top: 220%;
+    left:10%;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+.data {
+    height: 20%;
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.go {
+    width:8vh;
+    height :6vh;
+    padding-left: 2%;
+}
+.pushdata {
+    width: 100%;
+    height: 60%;
+    padding-top:10%;
+}
+table{
+    background-color: rgba(26, 26, 26,0.3);
+    border-collapse: collapse;
+    margin:0 auto;
+    width: 80%;
+    height :100%;
+    border-radius:20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    width: 5%;
+    position: relative;
+    text-align: center;
+    height: 20%; 
+}
+.leftnum{
+    width :100%;
+    height :100%;
+    display:grid;
+    grid-template-rows:auto auto auto ;
+    grid-template-columns: auto ;
+    padding-top: 50%;
+    padding-left: 30%;
+}
+.thing{
+    text-align: center;
+    font-size: larger;
+}
+
+.jump{   
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(12,40px);
+    align-items: flex-end;
+    z-index: 2;
+    width :100%;
+    height :0%;
+    transition:  .5s;
+    animation: none;
+    position: absolute;
+    bottom: 0;
+   
+}
+.jump:hover{
+    height :100%;
+}
+@keyframes jumpUp {
+    0%{
+        height :0%;
+    }
+    100%{
+        height :100%;
+    }
+}
+@keyframes jumpDown {
+    0%{
+        height :100%;
+    }
+    100%{
+        height :0%;
+    }
+}
+.y{
+    z-index: 2;
+    width :100%;
+    background-color: yellow;
+}
+
+.a2011junr { height: 40%; }
+.a2011fre { height: 56%; }
+.a2011mar { height: 54%; }
+.a2011apr { height: 80%; }
+.a2011may { height: 123%; }
+.a2011jun { height: 160%; }
+.a2011jul { height: 218%; }
+.a2011aug { height: 205%; }
+.a2011set { height: 176%; }
+.a2011oct { height: 154%; }
+.a2011nov { height: 55%; }
+.a2011dec { height: 30%; }
+
+.a2012junr { height: 20%; }
+.a2012fre { height: 48%; }
+.a2012mar { height: 68%; }
+.a2012apr { height: 115%; }
+.a2012may { height: 125%; }
+.a2012jun { height: 175%; }
+.a2012jul { height: 160%; }
+.a2012aug { height: 199%; }
+.a2012set { height: 210%; }
+.a2012oct { height: 135%; }
+.a2012nov { height: 88%; }
+.a2012dec { height: 20%; }
+
+.a2013junr { height: 10%; }
+.a2013fre { height: 50%; }
+.a2013mar { height: 70%; }
+.a2013apr { height: 140%; }
+.a2013may { height: 130%; }
+.a2013jun { height: 200%; }
+.a2013jul { height: 180%; }
+.a2013aug { height: 210%; }
+.a2013set { height: 220%; }
+.a2013oct { height: 100%; }
+.a2013nov { height: 40%; }
+.a2013dec { height: 30%; }
+
+.a2014junr { height: 10%; }
+.a2014fre { height: 70%; }
+.a2014mar { height: 90%; }
+.a2014apr { height: 50%; }
+.a2014may { height: 90%; }
+.a2014jun { height: 150%; }
+.a2014jul { height: 160%; }
+.a2014aug { height: 190%; }
+.a2014set { height: 140%; }
+.a2014oct { height: 100%; }
+.a2014nov { height: 80%; }
+.a2014dec { height: 30%; }
+
+.a2015junr { height: 60%; }
+.a2016fre { height: 40%; }
+.a2015mar { height: 20%; }
+.a2015apr { height: 80%; }
+.a2015may { height: 90%; }
+.a2015jun { height: 170%; }
+.a2015jul { height: 200%; }
+.a2015aug { height: 210%; }
+.a2015set { height: 160%; }
+.a2015oct { height: 130%; }
+.a2015nov { height: 80%; }
+.a2015dec { height: 40%; }
+
+.a2016junr { height: 50%; }
+.a2016fre { height: 90%; }
+.a2016mar { height: 70%; }
+.a2016apr { height: 110%; }
+.a2016may { height: 120%; }
+.a2016jun { height: 180%; }
+.a2016jul { height: 170%; }
+.a2016aug { height: 210%; }
+.a2016set { height: 190%; }
+.a2016oct { height: 140%; }
+.a2016nov { height: 100%; }
+.a2016dec { height: 30%; }
+
+.a2017junr { height: 80%; }
+.a2017fre { height: 140%; }
+.a2017mar { height: 90%; }
+.a2017apr { height: 120%; }
+.a2017may { height: 140%; }
+.a2017jun { height: 200%; }
+.a2017jul { height: 190%; }
+.a2017aug { height: 240%; }
+.a2017set { height: 150%; }
+.a2017oct { height: 110%; }
+.a2017nov { height: 80%; }
+.a2017dec { height: 30%; }
+
+.a2018junr { height: 70%; }
+.a2018fre { height: 130%; }
+.a2018mar { height: 120%; }
+.a2018apr { height: 135%; }
+.a2018may { height: 130%; }
+.a2018jun { height: 240%; }
+.a2018jul { height: 220%; }
+.a2018aug { height: 230%; }
+.a2018set { height: 180%; }
+.a2018oct { height: 120%; }
+.a2018nov { height: 90%; }
+.a2018dec { height: 50%; }
+
+.a2019junr { height: 50%; }
+.a2019fre { height: 110%; }
+.a2019mar { height: 140%; }
+.a2019apr { height: 135%; }
+.a2019may { height: 140%; }
+.a2019jun { height: 210%; }
+.a2019jul { height: 220%; }
+.a2019aug { height: 200%; }
+.a2019set { height: 150%; }
+.a2019oct { height: 140%; }
+.a2019nov { height: 100%; }
+.a2019dec { height: 80%; }
+
+.a2020junr { height: 100%; }
+.a2020fre { height: 120%; }
+.a2020mar { height: 152%; }
+.a2020apr { height: 150%; }
+.a2020may { height: 152%; }
+.a2020jun { height: 150%; }
+.a2020jul { height: 152%; }
+.a2020aug { height: 152%; }
+.a2020set { height: 150%; }
+.a2020oct { height: 152%; }
+.a2020nov { height: 150%; }
+.a2020dec { height: 150%; }
+
+.a2021junr { height: 80%; }
+.a2021fre { height: 100%; }
+.a2021mar { height: 130%; }
+.a2021apr { height: 140%; }
+.a2021may { height: 145%; }
+.a2021jun { height: 155%; }
+.a2021jul { height: 160%; }
+.a2021aug { height: 165%; }
+.a2021set { height: 170%; }
+.a2021oct { height: 175%; }
+.a2021nov { height: 20%; }
+.a2021dec { height: 140%; }
+
+.a2022junr { height: 90%; }
+.a2022fre { height: 110%; }
+.a2022mar { height: 140%; }
+.a2022apr { height: 135%; }
+.a2022may { height: 150%; }
+.a2022jun { height: 145%; }
+.a2022jul { height: 150%; }
+.a2022aug { height: 155%; }
+.a2022set { height: 160%; }
+.a2022oct { height: 165%; }
+.a2022nov { height: 100%; }
+.a2022dec { height: 135%; }
+
+/* .cartoon
+{
+    position: absolute;
+    width:100%;
+    height :80%;
+    top :210%;
+    border:5px solid black;
+}
+
+.mover{
+    width :50%;
+    height :20%;
+    position: absolute;
+    top :40%;
+    right :0;
+    border :2px solid red;
+    transform: rotate( 45deg);
+    background-image: url('../13imgs/鯨魚1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: right 2s ease; 
+} */
+
+input[type="text"] {
+    border: 5px solid black;
+    border-radius: 5rem;
+    color: gray;
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+}
+.wo{
+    width :100%;
+    height:100%;
+    font-size: large;
+}
+#result{
+    text-align:center;
+    height: 40px;
+    line-height: 40px;
+    width: 150%;
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#result:hover{
+    cursor:pointer;
+}
+
+
+#popupButton{
+    position: absolute;
+    top:190%;
+    right: 10%;
+    line-height: 7vh;
+    float: right;
+    height :7vh;
+    background-color:rgb(128,207,240);
+    border-radius: 20px;
+    width:15%;
+    text-align: center;
+    justify-content:center ;
+    color: blue;
+    font-size: large;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#popupButton:hover{
+    background-color:#5E7D9C;
+    color:white;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.popup-content iframe {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 0;
+}
+
+.close {
+    position: fixed;
+    top: 12%;
+    right: 10%;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 999999;
+    background-color: rgba(26 ,26,26,0.3);
+    color:white;
+    font-weight: bold;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    overflow: hidden;
+}
+::-webkit-scrollbar-track-piece{
+    background-color: rgba(3, 226, 255,0.2);
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(3, 226, 255);
+    border-radius: 4px;
+}

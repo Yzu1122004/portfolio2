@@ -1,0 +1,883 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 119, 190);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.pwp {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 132vh;
+    background-image: url(./image/汙染背景.png);
+    background-size: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.all {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+
+
+.pollutetext {
+    position: absolute;
+    margin-top: 30vh;
+    height: 70vh;
+    width: 75vw;
+    justify-content: center;
+    background-position: center;
+}
+
+.pollutetext h1 {
+    font-size: 60px;
+    min-height: auto;
+    width: 100%;
+}
+
+.pollutetext p {
+    width: 100%;
+    font-size: 1.5vw;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.bg {
+    top: 20vh;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.factory {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./image/工廠.png);
+    background-size: 65%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+
+.pipe {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./image/水管.png);
+    background-size: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.dirtywater {
+    padding-top: 40%;
+    width: 100%;
+    height: 30vh;
+    background-image: url(./image/汙水.png);
+    background-size: 82vw;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 1s;
+}
+
+.water {
+    margin-bottom: -205vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgb(0, 119, 190), #4d4d4d 95%);
+    transition: height 1.5s;
+}
+
+
+
+.heavy_metal {
+    position: absolute;
+    padding: 5%;
+    top: 280vh;
+    width: 100%;
+    height: 100vh;
+    transition: top 1s;
+    background: url('./image/重金屬.png') repeat 0 0;
+    animation: 30s linear 0s normal none infinite animate;
+}
+
+.metaltext {
+    position: absolute;
+    height: 80vh;
+    width: calc(100% - 10%);
+    justify-items: center;
+    align-content: center;
+    background-color: rgba(79, 79, 79, 0.9);
+    border-radius: 10px;
+}
+
+.heavy_metal h1 {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 4vw;
+    color: white;
+}
+
+.heavy_metal p {
+    font-size: 2.0vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    color: white;
+}
+
+.floating-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+
+}
+
+.floating-object {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    animation: floatAndRotate 40s linear infinite;
+    pointer-events: auto;
+}
+
+.metalup {
+    top: 280vh;
+}
+
+.metaldown {
+    top: 500vh;
+}
+
+
+.plasticbg {
+    top: 500vh;
+    background: url(./image/汙染背景2.png);
+    height: 200%;
+    width: 100%;
+    padding-right: 14%;
+    position: absolute;
+    /* overflow: hidden; */
+    justify-content: center;
+    align-content: center;
+    transition: top 1s;
+}
+
+.plastictext {
+    position: absolute;
+    top: 0;
+    margin-left: 10%;
+    transform-style: preserve-3d;
+    padding: 10%;
+    height: 45%;
+    width: 80%;
+    background-color: rgb(240, 248, 255, 0.5);
+    border-radius: 10px;
+}
+
+.plastictext h1 {
+    font-size: 4vw;
+    align-content: center;
+}
+
+.plastictext p {
+    align-content: center;
+    font-size: 2vw;
+}
+
+.container {
+    width: 80%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    align-items: flex-end;
+    left: 10%;
+    top: 30%;
+}
+
+.container .box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: .5s;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #001);
+    animation: waveupdown 5s infinite;
+}
+
+.container .box img {
+    position: absolute;
+    border-radius: 20px 20px 0 0;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.plasticup {
+    top: 400vh;
+}
+
+.plasticdown {
+    top: 500vh;
+}
+
+
+.oilbg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 700vh;
+    overflow: hidden;
+}
+
+.oilbg img {
+    width: 100%;
+    height: auto;
+}
+
+.oiltext {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    padding: 25%;
+}
+
+.oiltext h1 {
+    font-size: 4vw;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.oiltext p {
+    font-size: 2vw;
+    color: white;
+}
+
+.oilsome {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: top 2s;
+}
+
+.oilship {
+    position: absolute;
+    top: -19.9%;
+    width: 100%;
+    height: 100%;
+    left: -60%;
+    overflow: hidden;
+    z-index: 1;
+    transition: left 4s ease-in-out, transform 5s;
+}
+
+.shipmove {
+    left: -60%;
+}
+
+.shipstop {
+    left: -10%;
+
+}
+
+.shipx {
+    transform: translateY(0) rotate(0deg);
+}
+
+.shipo {
+    transform: translateY(30vh) rotate(50deg);
+}
+
+.oilship img {
+    width: 60%;
+    height: auto;
+}
+
+.oil {
+    top: 0%;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 2s;
+    z-index: 3;
+}
+
+.oilin {
+    opacity: 1;
+}
+
+.oilout {
+    opacity: 0;
+}
+
+.oil img {
+    width: 60%;
+}
+
+.oilup {
+    top: 55%;
+}
+
+.oildown {
+    top: 100%;
+}
+
+.oilsea {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.oilsea img {
+    width: 100%;
+}
+
+
+
+
+@keyframes waveupdown {
+
+    0%,
+    100% {
+        transform: translateY(0) rotateY(0);
+    }
+
+    50% {
+        transform: translateY(-80px) rotateY(180deg);
+    }
+}
+
+.container .box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.container .box:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.container .box:nth-child(3) {
+    animation-delay: 1.0s;
+}
+
+.container .box:nth-child(4) {
+    animation-delay: 1.4s;
+}
+
+
+.flood {
+    height: 0%;
+}
+
+.drain {
+    height: 190%;
+}
+
+@keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 30vw 0;
+    }
+}
+
+@keyframes floatAndRotate {
+    from {
+        transform: translateX(0vw) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(100vw) rotate(360deg);
+    }
+}
+
+
+@keyframes animateBubble {
+    0% {
+        top: 75%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes ops {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bigsmal {
+    0% {
+        height: 5vw;
+        width: 5vw;
+    }
+
+    100% {
+        height: 10vw;
+        width: 15vw;
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        left: 25vw;
+    }
+
+    25% {
+        left: 29vw;
+    }
+
+    50% {
+        left: 25vw;
+    }
+
+    75% {
+        left: 31vw;
+    }
+
+    100% {
+        left: 28vw;
+    }
+}
+
+@keyframes sideWays2 {
+    0% {
+        left: 38vw;
+    }
+
+    25% {
+        left: 42vw;
+    }
+
+    50% {
+        left: 38vw;
+    }
+
+    75% {
+        left: 47vw;
+    }
+
+    100% {
+        left: 42vw;
+    }
+}
+
+@keyframes sideWays3 {
+    0% {
+        left: 55vw;
+    }
+
+    25% {
+        left: 60vw;
+    }
+
+    50% {
+        left: 55vw;
+    }
+
+    75% {
+        left: 62vw;
+    }
+
+    100% {
+        left: 55vw;
+    }
+}
+
+.x1 {
+    animation: animateBubble 8s linear infinite, sideWays 5s ease-in-out infinite alternate, 8s ops infinite, 8s bigsmal infinite;
+    left: -5%;
+    top: 5%;
+    transform: scale(0.6);
+}
+
+.x2 {
+    animation: animateBubble 8s linear infinite, sideWays2 5s ease-in-out infinite alternate, 8s ops infinite, 8s bigsmal infinite;
+    left: 30vw;
+    top: 5%;
+    transform: scale(0.6);
+}
+
+.x3 {
+    animation: animateBubble 8s linear infinite, sideWays3 5s ease-in-out infinite alternate, 8s ops infinite, 8s bigsmal infinite;
+    left: -5%;
+    top: 5%;
+    transform: scale(0.6);
+}
+
+.bubble {
+    border-radius: 50%;
+    background-color: #4d4d4d;
+    height: 5vw;
+    position: absolute;
+    width: 5vw;
+}
+
+
+
+
+.allpie {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-self: center;
+    align-items: center;
+    position: absolute;
+    top: 200vh;
+    transition: top 3.5s;
+    grid-template-areas:
+        "h1 h1 h1 h1"
+        "pi1 pi2 pi3 pi4"
+        "p1 p1 p1 p1";
+}
+
+.allpie h1 {
+    width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 20vh;
+    grid-area: h1;
+    height: auto;
+    font-size: 5vw;
+    color: white;
+}
+
+.pietext {
+    grid-area: p1;
+    padding-top: 20vh;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    font-size: 2vw;
+    color: white;
+}
+
+.pieup {
+    top: 135vh;
+}
+
+.piedown {
+    top: 260vh;
+}
+
+.pie {
+    margin-left: 4vw;
+    margin-top: 20vh;
+}
+
+.pie:nth-child(2) {
+    grid-area: pi1;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie:nth-child(3) {
+    grid-area: pi2;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie:nth-child(4) {
+    grid-area: pi3;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie:nth-child(5) {
+    grid-area: pi4;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie:nth-child(2) p::before {
+    content: "塑";
+    font-size: 5vw;
+    color: #022873;
+
+}
+
+.pie:nth-child(3) p::before {
+    content: "油";
+    font-size: 5vw;
+    color: #258de8;
+}
+
+.pie:nth-child(4) p::before {
+    content: "重";
+    font-size: 5vw;
+    color: #05AFF2;
+}
+
+.pie:nth-child(5) p::before {
+    content: "其";
+    font-size: 5vw;
+    color: #94E1F2;
+}
+
+.pie::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-radius: 100%;
+    inset: 0;
+    background: conic-gradient(var(--color) calc(var(--percentage) * 1%), #0000 2%), #eee;
+    mask-image: radial-gradient(farthest-side, #0000 calc(80% - 10px), #000 calc(80% - 10px));
+}
+
+.pie.ani {
+    animation-name: pieAni;
+    animation-duration: 5s;
+    animation-fill-mode: inherit;
+}
+
+.pie.reverseani {
+    animation-name: pieAniReverse;
+    animation-duration: 2s;
+    animation-fill-mode: inherit;
+}
+
+
+
+
+.allpie2 {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    justify-self: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    grid-template-areas:
+        "h2 h2 h2 h2"
+        "p1 p2 p3 p4"
+        "p5 p5 p5 p5";
+}
+
+.allpie2 h1 {
+    width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 20vh;
+    grid-area: h2;
+    height: auto;
+    font-size: 5vw;
+    color: white;
+}
+
+.pietext2 {
+    grid-area: p5;
+    padding-top: 20vh;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    font-size: 2vw;
+    color: white;
+}
+
+.pie2 {
+    margin-left: 4vw;
+    margin-top: 20vh;
+}
+
+.pie2:nth-child(2) {
+    grid-area: p1;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie2:nth-child(3) {
+    grid-area: p2;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie2:nth-child(4) {
+    grid-area: p3;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie2:nth-child(5) {
+    grid-area: p4;
+    height: 15vw;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.pie2:nth-child(2) p::before {
+    content: "食";
+    font-size: 5vw;
+    color: #022873;
+
+}
+
+.pie2:nth-child(3) p::before {
+    content: "寶";
+    font-size: 5vw;
+    color: #258de8;
+}
+
+.pie2:nth-child(4) p::before {
+    content: "塑";
+    font-size: 5vw;
+    color: #05AFF2;
+}
+
+.pie2:nth-child(5) p::before {
+    content: "一";
+    font-size: 5vw;
+    color: #94E1F2;
+}
+
+.pie2::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-radius: 100%;
+    inset: 0;
+    background: conic-gradient(var(--color) calc(var(--percentage) * 1%), #0000 2%), #eee;
+    mask-image: radial-gradient(farthest-side, #0000 calc(80% - 10px), #000 calc(80% - 10px));
+}
+
+.pie2.ani {
+    animation-name: pieAni;
+    animation-duration: 5s;
+    animation-fill-mode: inherit;
+}
+
+.pie2.reverseani {
+    animation-name: pieAniReverse;
+    animation-duration: 2s;
+    animation-fill-mode: inherit;
+}
+
+@property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@keyframes pieAniReverse {
+    to {
+        --percentage: 0;
+    }
+}
+
+@keyframes pieAni {
+    from {
+        --percentage: 0;
+    }
+}

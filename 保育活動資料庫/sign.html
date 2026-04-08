@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sign.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+    <div class="ch5">
+        <div class="All">
+            <div class="THing">
+                <p class="Topic">太平洋賞鯨之旅</p>
+                <p class="RoaD">船隻:華棋268</p>
+                <p class="RoaD">行程日期:7/20,7/21 7/27,7/28<br>
+                    10:00~13:00 ，15:00~17:00</p>
+                <p class="TLightYellow">注意事項:</br>
+                    ※此行程不含餐費及交通接送<br>
+                    ※本航程需滿最低人數15位報名</p>
+                <p class="RoaD">地點:花蓮縣花蓮市華東15號</p>
+                <p class="RoaD">離登船地點還有幾分鐘的車程<br>是需要自行處裡的喔！</p>
+                <p class="RoaD">報到處&登船處 均設有免費停車場!!!</p>
+                <p class="Core">▶我們關心環境──海岸、海洋廢<br>
+                    棄物監測</p>
+                <p class="Core">▶我們關注海洋生物──鯨豚生態<br>
+                    調查與鯨豚權益發聲</p>
+                <p class="Core">▶我們在乎人──海洋文化研究與<br>
+                    環境教育推廣</p>
+                <p class="RoaD">我們都是大海的子民，<br>而人與海的和諧依存，<br>是需要
+                    「大家一起」實現的願景。<br>邀請每一個被海洋滋養過
+                    的生命一起成為「槳」，<br>為與海洋共好而努力！</p>
+                <p class="weare">
+                    蔚藍復興文教基金會<br>
+                    地址 | 970064 花蓮市中美路170號<br>
+                    信箱 | kuroshio@koef.org<br>
+                    電話 | 03-8246-700、03-8246-902<br>
+                    傳真 | 03-8246-717<br>
+                    立案字號 | 八七府教社字第033027號<br>
+                    統一編號 | 73761619<br>
+                    勸募許可文號 | 衛部救字第1131360553號<br>
+                </p>
+            </div>
+            <div class="Sign">
+                <p class="Topic1">參加</p>
+                <form>
+                    <div class="oppoin">
+                        <label for="name">姓名：</label>
+                        <input type="text" id="name" name="name" size="30" required>
+                    </div><br>
+                    <div class="oppoin">
+                        <label for="phone">電話：</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{2}(\-[0-9]{8})" size="30" required>
+                    </div><br>
+                    <div class="oppoin"> <label for="email">電子信箱：</label>
+                        <input type="mail" id="email" name="email" size="26" required>
+                    </div><br>
+                    <div class="oppoin"><label for="number">人數：</label>
+                        <input type="number" id="number" name="number" size="40" required min="1" >
+                    </div><br>
+                    <div class="oppoin"><label for="number">日期：</label>
+                        <input type="checkbox" id="date1" name="date" value="7/20">7/20
+                        <input type="checkbox" id="date2" name="date" value="7/21">7/21
+                        <input type="checkbox" id="date3" name="date" value="7/27">7/27
+                        <input type="checkbox" id="date4" name="date" value="7/28">7/28
+                    </div>
+                        <br>
+                        <div class="oppoin"><label for="number">時段：</label>
+                            <input type="checkbox" id="time1" name="time"  value="10:00~13:00">10:00~13:00
+                            <input type="checkbox" id="time2" name="time"  value="15:00~17:00">15:00~17:00
+                        </div>
+                            <br>
+                            <div class="ship" id="ship">
+                                <div class="b">
+                                    <div type="button" id="calculatePrice" class="down">
+                                        <input type="submit">
+                                    </div>
+                                </div>
+                            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        document.getElementById("calculatePrice").addEventListener("click", function() {
+            var numberOfPeople = document.getElementById("number").value;
+            if (numberOfPeople) {
+                var ticketPrice = numberOfPeople * 500;
+
+      
+                var randomCode = Math.floor(1000 + Math.random() * 9000);
+
+
+            window.alert("票價為: " + ticketPrice + "元\n您的序號為: " + randomCode);
+            } 
+            else {
+                window.alert("請輸入人數");
+            }
+
+
+        });
+
+
+
+
+        document.getElementById("whaleTourForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var jsonData = {};
+            formData.forEach((value, key) => jsonData[key] = value);
+
+            console.log(JSON.stringify(jsonData));
+            alert("報名成功！");
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

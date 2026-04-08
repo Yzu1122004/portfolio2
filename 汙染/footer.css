@@ -1,0 +1,52 @@
+footer
+{
+    width: 100%;
+    color: #000000;
+    background-color: rgb(228, 228, 228);
+    float: left;
+    /* display: flex; */
+    position: absolute;
+    top: 930vh;
+}
+.f
+{
+    padding-top:1.5%;
+    margin-bottom: 2%;
+}
+.fg{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    line-height: 24px;
+}
+.fh{
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+.fp{
+    font-size: clamp(70%, 1vw, 100%);
+}
+.fl{
+    text-align: center;
+    padding: 1%;
+}
+.fhr{
+    border: 1px solid black;
+    width: 80%;
+    margin-left:10% ;
+}
+.imgf{
+    width: 40%;
+    margin-left: 1%;
+    height: 9%;
+    background-size:cover ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}

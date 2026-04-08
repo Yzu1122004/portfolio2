@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>蔚藍復興</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer.css">
+    <script src="script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js'></script>
+    <script>
+        var VisibleMenu = '';
+        function switchMenu(theMainMenu, theSubMenu, theEvent) {
+            var SubMenu = document.getElementById(theSubMenu);
+            if (SubMenu.style.display == 'none') {
+                SubMenu.style.minWidth = theMainMenu.clientWidth;
+                SubMenu.style.display = 'block';
+                hideMenu();
+                VisibleMenu = theSubMenu;
+            }
+            else {
+                if (theEvent != 'MouseOver' || VisibleMenu != theSubMenu) {
+                    SubMenu.style.display = 'none';
+                    VisibleMenu = '';
+                }
+            }
+        }
+        function hideMenu() {
+            if (VisibleMenu != '') {
+                document.getElementById(VisibleMenu).style.display = 'none';
+            }
+            VisibleMenu = '';
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <a class="ha" href="../index.html">
+                <h1>蔚藍復興</h1>
+            </a>
+            <div class="img"><img src="./image/圖層 1.png" height="100%" alt=""></div>
+        </div>
+        <div class="title2">
+            <span class="main-menu">
+                <a class="ha" href="../html/main.html">首頁</a>
+            </span>
+            <span class="main-menu">
+                <a class="ha" href="../為何鯨魚重要/index.html">鯨魚為何重要</a>
+            </span>
+            <span class="main-menu" onmouseover="switchMenu( this, 'SubMenu1', 'MouseOver' )" onmouseout="hideMenu()"> 鯨魚的危機<span style="font-size:9px;">&#9660;</span>
+            <ul id="SubMenu1" class="sub-menu" style="display:none;">
+                <li><a href="../商業捕鯨/owo2.html">商業捕鯨</a></li>
+                <li><a href="../汙染/owo.html">汙染與混獲</a></li>
+            </ul>
+            </span>
+            <span class="main-menu" onmouseover="switchMenu( this, 'SubMenu2', 'MouseOver' )" onmouseout="hideMenu()"> 保育活動<span style="font-size:9px;">&#9660;</span>
+            <ul id="SubMenu2" class="sub-menu" style="display:none;">
+                <li><a href="../保育活動資料庫/index.html">資料庫建設</a></li>
+                <li><a href="../活動/index.html">友善賞鯨</a></li>
+            </ul>
+            </span>
+            <span class="main-menu">
+                <a class="ha" href="../鯨魚網站成員介紹/">成員介紹</a>
+            </span>
+        </div>
+    </header>
+    <main>
+        <div class="all">
+            <div class="pwp"></div>
+            <div class="bubble x1"></div>
+            <div class="bubble x2"></div>
+            <div class="bubble x3"></div>
+            <div class="pollutetext">
+                <h1>環境汙染</h1>
+                <p>環境汙染是指由人類活動引起的對自然環境造成的不良影響和破壞。目前海洋污染絕大多數都是來自於陸地人為製造的，包括：塑膠污染、重金屬污染以及油污染等。這些污染均會造成生態破壞並且對海洋生物有害。</p>
+            </div>
+            <div class="bg">
+                <div class="factory"></div>
+                <div class="pipe">
+                    <div class="dirtywater"></div>
+                    <div class="water"></div>
+                </div>
+            </div>
+            <div class="allpie">
+                <h1>汙染類型比例</h1>
+                <div class="pie" style="--percentage: 80; --color: #022873;">
+                    <p>膠汙染<br>80%</p>
+                </div>
+                <div class="pie" style="--percentage: 12; --color: #0476D9;">
+                    <p>汙染<br>12%</p>
+                </div>
+                <div class="pie" style="--percentage: 5; --color: #05AFF2;">
+                    <p>金屬<br>5%</p>
+                </div>
+                <div class="pie" style="--percentage: 3; --color: #94E1F2;">
+                    <p>他<br>3%</p>
+                </div>
+                <div class="pietext">
+                    &ensp;&ensp;&ensp;&ensp;海洋污染的主要成分包括塑膠污染、油污染、重金屬污染和其他污染物。塑膠垃圾是最大的污染源，約佔海洋污染的60-80%。油污染主要來自船舶洩漏和海上石油鑽井平台，約佔12%。重金屬污染如汞、鉛和鎘主要來自工業排放和農業逕流，佔不到5%。其他污染物，包括化學污染、營養物污染和生物污染，合計佔據剩餘的3-23%。這些比例是基於一般估計，實際情況可能因地區和時間有所不同。詳細的研究和監測數據對於準確評估各類型污染在海洋污染中的比例至關重要。
+                </div>
+            </div>
+            <div class="heavy_metal">
+                <div class="metaltext">
+                    <div class="floating-container"></div>
+                    <h1>重金屬汙染</h1>
+                    <p>
+                        海洋重金屬污染物主要經由人為活動流入海中，來源很多，包括燃煤、燃油、發電廠、鋼鐵廠等排放的重金屬污染物，重金屬進入生物體後，不易被排出或分解，通常會經由食物鏈逐漸累積，對動物或人體造成危害
+                    </p>
+                </div>
+            </div>
+            <div class="plasticbg">
+                <div class="container">
+                    <div class="box"><img src="./image/包裝.png" alt=""></div>
+                    <div class="box"><img src="./image/寶特瓶.png" alt=""></div>
+                    <div class="box"><img src="./image/塑膠袋.png" alt=""></div>
+                    <div class="box"><img src="./image/一次性.png" alt=""></div>
+                </div>
+                <div class="plastictext">
+                    <h1>塑膠汙染</h1>
+                    <p>
+                        <br>
+                        塑膠汙染是指在自然環境中大量存在的塑膠製品對環境造成的污染。塑膠是一種常見的人造材料，具有耐用性和輕便性，因此被廣泛使用。然而，塑膠製品的過度使用和遺棄導致了塑膠汙染的嚴重問題。
+                        流入海中的寶特瓶、塑膠容器、漁具等廢棄物，可能使海洋生物被纏繞而亡，或是被鯨魚、海鳥、海龜和魚類誤食，造成牠們因胃部塞滿塑膠、無法消化而餓死
+                    </p>
+                </div>
+                <div class="allpie2">
+                    <h1>塑膠類型比例</h1>
+                    <div class="pie2" style="--percentage: 40; --color: #022873;">
+                        <p>品包裝<br>40%</p>
+                    </div>
+                    <div class="pie2" style="--percentage: 20; --color: #0476D9;">
+                        <p>特瓶<br>20%</p>
+                    </div>
+                    <div class="pie2" style="--percentage: 15; --color: #05AFF2;">
+                        <p>膠袋<br>15%</p>
+                    </div>
+                    <div class="pie2" style="--percentage: 10; --color: #94E1F2;">
+                        <p>次性<br>用品<br>10%</p>
+                    </div>
+                    <div class="pietext2">
+                        在現代社會中，塑膠製品的廣泛使用導致了大量的塑膠廢棄物。以下是四類主要塑膠廢棄物的比例及其影響：<br>
+                        <br>
+                        &ensp;&ensp;食品包裝（40%）：<br>
+                        &ensp;&ensp;&ensp;&ensp;食品包裝是最大的塑膠廢棄物來源，包括包裝膜、容器和零食袋等。由於使用壽命短，這類廢棄物大量產生且難以回收，對環境造成嚴重污染。<br>
+                        <br>
+                        &ensp;&ensp;寶特瓶（20%）：<br>
+                        &ensp;&ensp;&ensp;&ensp;寶特瓶（如PET瓶）占塑膠廢棄物的20%。雖然PET瓶可以回收，但大量的使用和不當處理導致了廣泛的環境污染。<br>
+                        <br>
+                        &ensp;&ensp;塑膠袋（15%）：<br>
+                        &ensp;&ensp;&ensp;&ensp;塑膠袋占15%。它們因輕便和多用途被廣泛使用，但也因容易隨風飄散而成為主要的環境污染源之一。<br>
+                        <br>
+                        &ensp;&ensp;一次性用品（10%）：<br>
+                        &ensp;&ensp;&ensp;&ensp;一次性用品如塑膠餐具、吸管等，占塑膠廢棄物的10%。這些產品使用時間短，但對環境的破壞卻持續多年。<br>
+                    </div>
+                </div>
+            </div>
+            <div class="oilbg">
+                <img src="./image/汙染背景3.png" alt="">
+                <div class="oiltext">
+                    <h1>
+                        油汙染
+                    </h1>
+                    <p>
+                        船隻漏油、燃料排放等引起的油汙石油泄漏對生態環境的影響相當廣泛，海鳥羽毛沾上石油便無法飛翔，鯨魚、海豚及其他海洋生物游過漏油水域或吸入有毒氣體會呼吸困難或死亡
+                    </p>
+                </div>
+                <div class="oilsome">
+                    <div class="oilship"><img src="./image/船2.png" alt=""></div>
+                    <div class="oil"><img src="./image/漏油.png" alt=""></div>
+                    <div class="oilsea"><img src="./image/油海洋.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="fg">
+            <div class="f fh">
+                <a class="ha" src="../index.html"><h1>蔚藍復興</h1></a>
+                <div class="imgf"><img src="../13imgs/圖層 1.png" width="100%" alt=""></div>
+            </div>
+            <div class="f fp">
+                <p>
+                    地址 | 970064 花蓮市中美路170號<br>
+                    信箱 | kuroshio@koef.org<br>
+                    電話 | 03-8246-700、03-8246-902<br>
+                    傳真 | 03-8246-717
+                </p>
+            </div>
+            <div class="f fp" >    
+                <p>
+                    立案字號 | 八七府教社字第033027號<br>
+                    統一編號 | 73761619<br>
+                    勸募許可文號 | 衛部救字第1131360553號<br>
+                    發票愛鯨捐 | 59427
+                </p>
+            </div>
+            <div class="f fp" >
+                <p>
+                    聯絡我們<br>
+                    隱私權政策<br>
+                </p>
+            </div>
+        </div>
+        <hr class="fhr">
+        <div class="fl">
+            Copyright © 2019 Kuroshio Ocean Education Foundation
+        </div>
+    </footer>
+
+</body>
+
+</html>

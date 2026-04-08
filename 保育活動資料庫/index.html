@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔚藍復興</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./GenRyuMin-H.ttc">
+    <link rel="stylesheet" href="./MantouSans-Regular.ttf">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <iframe src="./sign.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <header>
+        <div class="title">
+            <a class="ha" href="../index.html">
+                <h1>蔚藍復興</h1>
+            </a>
+            <div class="img"><img src="./13imgs/1.png" height="100%" alt=""></div>
+        </div>
+        <div class="title2">
+            <span class="main-menu">
+                <a class="ha" href="../html/main.html">首頁</a>
+            </span>
+            <span class="main-menu">
+                <a class="ha" href="../為何鯨魚重要/index.html">鯨魚為何重要</a>
+            </span>
+            <span class="main-menu" onmouseover="switchMenu( this, 'SubMenu1', 'MouseOver' )" onmouseout="hideMenu()">
+                鯨魚的危機<span style="font-size:9px;">&#9660;</span>
+                <ul id="SubMenu1" class="sub-menu" style="display:none;">
+                    <li><a href="../商業捕鯨/owo2.html">商業捕鯨</a></li>
+                    <li><a href="../汙染/owo.html">汙染與混獲</a></li>
+                </ul>
+            </span>
+            <span class="main-menu" onmouseover="switchMenu( this, 'SubMenu2', 'MouseOver' )" onmouseout="hideMenu()">
+                保育活動<span style="font-size:9px;">&#9660;</span>
+                <ul id="SubMenu2" class="sub-menu" style="display:none;">
+                    <li><a href="../保育活動資料庫/index.html">資料庫建設</a></li>
+                    <li><a href="../活動/index.html">友善賞鯨</a></li>
+                </ul>
+            </span>
+            <span class="main-menu">
+                <a class="ha" href="../鯨魚網站成員介紹/index.html">成員介紹</a>
+            </span>
+        </div>
+    </header>
+    <main>
+        <article class="mainView">
+            <div class="anime"></div>
+            <div class=whale></div>
+            <div class="wave"></div>
+        </article>
+        <div class="taitle"><span>花蓮賞鯨資料庫</span></div>
+        <div class="part">
+            <div class="picture"></div>
+            <div class="contents" id="content">
+                1998年起與多羅滿賞鯨公司合作，
+                蒐集了花蓮近海的鯨豚長期目擊紀錄。
+                使用手持式GPS和鯨豚目擊紀錄目擊的鯨豚種類、出現位置、時間、個體數量。
+                在本在全球生物多樣性資訊機構上發布了觀測紀錄，
+                船上會安排海上解說員，負責解說及填寫鯨豚目擊紀錄
+                表。出海後，會使用手持式
+                GPS記錄目擊鯨豚時的經緯度、時間、確認鯨豚的種類、個體數量。
+            </div>
+            <div class="second">
+                <div class="contents">
+                    目擊紀錄由研究員進行資料清理，
+                    鯨豚學名都經過檢核後，
+                    添加到資料集中。
+                    上傳到GBIF之前，我們將每個欄位的資料
+                    進行對應、轉換。調整後，將會來評估潛在問題，
+                    由研究員進行後續校正。倘若不確定的目擊，且缺乏描述或影像，
+                    將會被排除在資料集之外。
+                </div>
+                <div class="photo"></div>
+            </div>
+
+            <div class="third">
+                <div class="photograph"></div>
+                <div class="contents">
+                    過去曾紀錄過被，國際自然保育聯盟列為數據缺乏
+                    的鯨豚種類，包含大村鯨：僅有110筆，9筆來自海蔚；銀杏齒中喙鯨
+                    ：僅有112筆，海蔚貢獻3筆。飛旋海豚
+                    來說，黑潮過去蒐集的資料筆數目前為冠軍，共有近5,200筆，
+                    遠遠超過第二名2,000多筆，而花紋海豚資料筆數也名列第四名，
+                    在部分種類有不錯的累積成果。
+                </div>
+                
+            </div>
+            
+
+        </div>
+        <button id="popupButton">參加下次活動</button>
+    </main>
+    <article class="mainData">
+
+        <form action="">
+            <div class="data">
+                <div class="item">
+                    <input type="text" name="datas" id="data" list="mean"  placeholder="輸入年分可查詢資料 2011~2022"
+                        maxlength="10">
+                    <datalist id="mean">
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </datalist>
+                </div>
+                <div class="go">
+                    <!-- <input type="submit"> -->
+                    <div id="result"> 搜尋</div> 
+                </div>
+            </div>
+            <div class="cartoon" >
+                <div class="mover">
+                    
+                </div>
+            </div>
+
+
+        <div class="word"><h1>年代觀測數據表</h1></div>  
+        </form>
+        <div class="pushdata">
+
+            <table frame=void>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">
+                            <div class="leftnum">
+                                <div class="thing">100</div>
+                                <div class="thing">40</div>
+                                <div class="thing">20</div>
+                            </div>
+                        </td>
+                        <td colspan="12"></td>
+                        <!-- <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td> -->
+                    </tr>
+                    <tr>
+                        <td colspan="12"></td>
+                        <!-- <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td> -->
+                    </tr>
+
+                    <tr>
+                        <td colspan="12"></td>
+                        <!-- <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td> -->
+                    </tr>
+
+                    <tr >
+                        <td colspan="12">
+                        <div id="jump" class="jump">
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                            <div class="y"></div>
+                        </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>1月</td>
+                        <td>2月</td>
+                        <td>3月</td>
+                        <td>4月</td>
+                        <td>5月</td>
+                        <td>6月</td>
+                        <td>7月</td>
+                        <td>8月</td>
+                        <td>9月</td>
+                        <td>10月</td>
+                        <td>11月</td>
+                        <td>12月</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </article>
+    <footer>
+        <div class="fg">
+            <div class="f fh">
+                <a class="ha" src="../index.html"><h1>蔚藍復興</h1></a>
+                <div class="imgf"><img src="../13imgs/圖層 1.png" width="100%" alt=""></div>
+            </div>
+            <div class="f fp">
+                <p>
+                    地址 | 970064 花蓮市中美路170號<br>
+                    信箱 | kuroshio@koef.org<br>
+                    電話 | 03-8246-700、03-8246-902<br>
+                    傳真 | 03-8246-717
+                </p>
+            </div>
+            <div class="f fp">
+                <p>
+                    立案字號 | 八七府教社字第033027號<br>
+                    統一編號 | 73761619<br>
+                    勸募許可文號 | 衛部救字第1131360553號<br>
+                    發票愛鯨捐 | 59427
+                </p>
+            </div>
+            <div class="f fp">
+                <p>
+                    聯絡我們<br>
+                    隱私權政策<br>
+                </p>
+            </div>
+        </div>
+        <hr class="fhr">
+        <div class="fl">
+            Copyright © 2019 Kuroshio Ocean Education Foundation
+        </div>
+    </footer>
+    <script>
+        var VisibleMenu = '';
+        function switchMenu(theMainMenu, theSubMenu, theEvent) {
+            var SubMenu = document.getElementById(theSubMenu);
+            if (SubMenu.style.display == 'none') {
+                SubMenu.style.minWidth = theMainMenu.clientWidth;
+                SubMenu.style.display = 'block';
+                hideMenu();
+                VisibleMenu = theSubMenu;
+            }
+            else {
+                if (theEvent != 'MouseOver' || VisibleMenu != theSubMenu) {
+                    SubMenu.style.display = 'none';
+                    VisibleMenu = '';
+                }
+            }
+        }
+        function hideMenu() {
+            if (VisibleMenu != '') {
+                document.getElementById(VisibleMenu).style.display = 'none';
+            }
+            VisibleMenu = '';
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const yearInput = document.getElementById('data');
+        const jump = document.getElementById('jump');
+        const down = document.getElementById('down');
+        const butto = document.getElementById('result');
+        const yElements = jump.getElementsByClassName('y');
+
+
+        // const mover = document.querySelector('.mover');
+
+        butto.addEventListener("click", function () {
+        const year = yearInput.value;
+        jump.style.animation = 'jumpDown 0.5s forwards';
+
+        // mover.style.animation = 'jumpDown 0.5s forwards'; // 讓 mover 跟著移動
+        setTimeout(function() {
+                updateJumpClass(year);
+                jump.style.animation = 'jumpUp 1s 1 forwards';
+
+                // mover.style.animation = 'jumpUp 1s 1 forwards'; // 讓 mover 跟著移動
+
+
+            }, 500); 
+        });
+        
+            function updateJumpClass(year) {
+                const classNames = ['junr', 'fre', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'set', 'oct', 'nov', 'dec'];
+                for (let i = 0; i < yElements.length; i++) {
+                    for (let yearPrefix of ['2011','2012','2013','2014','2015','2016', '2017','2018', '2019', '2020', '2021', '2022']) {
+                        yElements[i].classList.remove(`${yearPrefix}${classNames[i]}`);
+                    }
+                }
+            
+                for (let i = 0; i < yElements.length; i++) {
+                    if (year === '2011') {
+                        yElements[i].classList.add(`a2011${classNames[i]}`);
+                    }
+                    else if (year === '2012') {
+                        yElements[i].classList.add(`a2012${classNames[i]}`);
+                    }
+                    else if (year === '2013') {
+                        yElements[i].classList.add(`a2013${classNames[i]}`);
+                    }
+                    else if (year === '2014') {
+                        yElements[i].classList.add(`a2014${classNames[i]}`);
+                    }
+                    else if (year === '2015') {
+                        yElements[i].classList.add(`a2015${classNames[i]}`);
+                    }
+                    else if (year === '2016') {
+                        yElements[i].classList.add(`a2016${classNames[i]}`);
+                    }
+                    else if (year === '2017') {
+                        yElements[i].classList.add(`a2017${classNames[i]}`);
+                    }
+                    else if (year === '2018') {
+                        yElements[i].classList.add(`a2018${classNames[i]}`);
+                    }
+                    else if (year === '2019') {
+                        yElements[i].classList.add(`a2019${classNames[i]}`);
+                    }
+                    else if (year === '2020') {
+                        yElements[i].classList.add(`a2020${classNames[i]}`);
+                    } else if (year === '2021') {
+                        yElements[i].classList.add(`a2021${classNames[i]}`);
+                    } else if (year === '2022') {
+                        yElements[i].classList.add(`a2022${classNames[i]}`);
+                    }
+                }
+            }
+        });
+
+
+        document.getElementById("popupButton").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "flex";
+        });
+
+        document.querySelector(".close").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none";
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target == document.getElementById("popup")) {
+                document.getElementById("popup").style.display = "none";
+            }
+        });
+
+
+
+
+
+        window.addEventListener('scroll', function() {
+            const box = document.querySelector('.second');
+            const boxRect = box.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // 判斷 box 是否快到螢幕中央
+            if (boxRect.top < windowHeight / 2 && boxRect.bottom > windowHeight / 2) {
+                box.classList.add('visible');
+            } else {
+                box.classList.remove('visible');
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            const box = document.querySelector('.third');
+            const boxRect = box.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // 判斷 box 是否快到螢幕中央
+            if (boxRect.top < windowHeight / 2 && boxRect.bottom > windowHeight / 2) {
+                box.classList.add('visible');
+            } else {
+                box.classList.remove('visible');
+            }
+        });
+
+
+</script>
+</body>
+
+</html>
