@@ -1,0 +1,30 @@
+main{
+    height: 300%;
+    width: 100%;
+    visibility: hidden;
+    position: fixed;
+    animation-iteration-count:1;
+    animation-delay: 3.8s;
+    animation-duration:0.8s;
+    animation-timing-function:linear ;
+    animation-fill-mode:forwards;
+    animation-name:starting;
+}
+.maini{
+    width: 100%;
+    background-repeat:no-repeat ;
+}
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track-piece{
+    background-color: rgba(3, 226, 255,0.2);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(3, 226, 255);
+    border-radius: 4px;
+}
+@keyframes starting{
+    0%{visibility: hidden;position: static;}
+    100%{visibility: visible;position: static;}
+}

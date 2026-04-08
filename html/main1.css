@@ -1,0 +1,170 @@
+
+.mfst{
+    background-image: url('../13imgs/天.png');
+    background-size: cover;
+    height: 33.33%;
+}
+.ma{
+    color: #000;
+}
+.waves{
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    height: 10vw;
+    background-size: cover;
+    background-position: left;
+    width: 100%;
+}
+.wave1{
+    background-image: url('../13imgs/海浪1.png');
+    animation:wave1 20s infinite;
+}
+.wave2{
+    background-image: url('../13imgs/海浪2.png');
+    animation:wave1 18s infinite linear;
+}
+.wave3{
+    background-image: url('../13imgs/海浪3.png');
+    animation:wave1 19s infinite ease-out;
+}
+.diew{
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    width: 40%;
+    left:35%;
+    animation:floatw 5s infinite;
+}
+.boat{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: -20%;
+    animation:floatw 4s infinite;
+}
+.trash{
+    display: flex;
+    width: 25%;
+    position: absolute;
+    bottom: 0%;
+    left: 70%;
+    animation:floatw 4.5s infinite;
+    overflow: hidden;
+}
+.what1{
+    position: absolute;
+    right: 10%;
+    width: 50%;
+    top:10%;
+    padding: 1%;
+    font-size: clamp(70%, 1vw, 100%);
+    line-height: 150%;
+    text-align: right;
+    opacity: 0%;
+    animation-fill-mode:forwards;
+    animation-name: what;
+    animation-delay: 5s;
+    animation-duration: 1s;
+}
+.whathr{
+    width: 80%;
+    right: 0;
+    position: absolute;
+    bottom: 0%;
+    border: 0;
+    padding-top: 1px;
+    background: linear-gradient(to right, transparent, #36364e, transparent);
+}
+.whatimg{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    top: -80%;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: whatdown;
+}
+.wtop{
+    width: 100%;
+    background-image: url('../13imgs/top.png');
+    background-size: cover;
+    text-align: center;
+    padding: 1%;
+    font-size: 1vw;
+    color: #ffffff;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+.wmimg{
+    display: flex;
+    border: 3px solid rgb(45, 47, 49);
+    border-top-right-radius: 5%;
+    border-top-left-radius:  5%;
+    overflow: hidden;
+}
+.wword{
+    border-bottom:2px dashed rgb(11, 78, 145) ;
+    padding: 2%;
+    line-height: 10%;
+    opacity: 0%;
+    font-size: clamp(70%, 1vw, 100%);
+    height: 0%;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.whatimg:hover .wword{
+    opacity: 100%;
+    line-height: 150%;
+    height: auto;
+}
+.whatimg:hover .wtop{
+    font-size: 1.5vw;
+}
+.whatimg:hover .wbot{
+    transform:rotate(180deg);
+}
+.wimg1{
+    left: 10%;
+    animation-delay: 5.5s;
+}
+.wimg2{
+    left: 40%;
+    animation-delay: 6s;
+}
+.wimg3{
+    left: 70%;
+    animation-delay: 6.5s;
+}
+.wbot{
+    margin-left: 24%;
+    margin-top: 1%;
+    transition: 0.5s;
+}
+
+@keyframes whatdown{
+    0%{top: -80%;}
+    70%{top: 35%;}
+    100%{top: 30%;}
+}
+@keyframes what{
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+@keyframes floatw{
+    0%{bottom: 0%;}
+    50%{bottom: 3%;}
+    100%{bottom: 0%;}
+}
+@keyframes wave1{
+    0%{background-position: left;}
+    50%{background-position: right;}
+    100%{background-position: left;}
+}
+@keyframes wave{
+    0%{width: 100%;}
+    50%{width: 130%;}
+    100%{width: 100%;}
+}

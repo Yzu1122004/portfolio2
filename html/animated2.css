@@ -1,0 +1,92 @@
+.biganimated{
+    height: 100%;
+    width: 100%;
+    background-image: url('../13imgs/海中途.png');
+    background-position:left;
+    background-size: cover;
+    background-repeat:no-repeat;
+    animation-iteration-count:1;
+    animation-delay: 2s;
+    animation-duration:1s;
+    animation-timing-function:linear ;
+    animation-fill-mode:forwards;
+    animation-name:whiteb;
+}
+.allani{
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.whale{
+    height: 100%;
+    width: 45%;
+    right: 5%;
+    top:-7%;
+    animation-iteration-count:1,1,1;
+    animation-delay: 0s,0.8s,1.6s;
+    animation-duration:0.8s,0.8s,4.4s;
+    animation-timing-function:ease-in,linear,ease-oue;
+    animation-name:whalesw2 ,whalesw3,catchw;
+}
+.yfish{
+    height: 100%;
+    width: 25%;
+    left: 5%;
+    top:-7%;
+    animation-iteration-count:1,1;
+    animation-delay: 0s,1.6s;
+    animation-duration:1.6s,1.5s;
+    animation-timing-function:linear,ease-oue;
+    animation-name:updown,catchf;
+}
+.net{
+    height: 400%;
+    width: 75%;
+    top: -150%;
+    left: -75%;
+    animation-iteration-count:1;
+    animation-delay: 1s;
+    animation-duration:2s;
+    animation-timing-function:ease-oue ;
+    animation-name:net;
+}
+.whalea{
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    bottom: 30%;
+}
+@keyframes whalesw2{
+    0%{top:-7%;right: 5%;}
+    100%{top:0%;right: 0%;}
+}
+@keyframes whalesw3{
+    0%{top:0%;right: 0%;}
+    100%{right:30%;top:-7%;}
+}
+@keyframes updown{
+    0%{ top:-7%;}
+    100%{ top:0%;}
+}
+@keyframes yfish2{
+    0%{left: 5%;top:-7%;}
+    100%{left:20%;top:-7%;}
+}
+@keyframes net{
+    100%{left:10%;}
+}
+
+@keyframes catchw{
+    0%{right:30%;top:-7%;}
+    100%{left:30%;top:-7%;}
+}
+@keyframes catchf{
+    0%{left:5%;top:0%;}
+    80%{left:30%;top:0%;}
+    100%{left:30%;top:0%;}
+}
+@keyframes whiteb{
+    0%{opacity: 100%;}
+    95%{opacity: 0%;}
+    100%{visibility: hidden;  opacity: 0%;position: fixed}
+}

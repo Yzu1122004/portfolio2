@@ -1,0 +1,61 @@
+footer
+{
+    width: 100%;
+    color: #000000;
+    background-color: rgb(228, 228, 228);
+    float: left;
+    position: fixed;
+    visibility: hidden;
+    animation-iteration-count:1;
+    animation-delay: 3.8s;
+    animation-duration:0.8s;
+    animation-timing-function:linear ;
+    animation-fill-mode:forwards;
+    animation-name:starting;
+}
+.f
+{
+    padding-top:1.5%;
+    margin-bottom: 2%;
+}
+.fg{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    line-height: 24px;
+}
+.fh{
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+.fp{
+    font-size: clamp(70%, 1vw, 100%);
+}
+.fl{
+    text-align: center;
+    padding: 1%;
+}
+.fhr{
+    border: 1px solid black;
+    width: 80%;
+    margin-left:10% ;
+}
+.imgf{
+    width: 40%;
+    margin-left: 1%;
+    height: 9%;
+    background-size:cover ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+@keyframes starting{
+    0%{visibility: hidden;position: static;}
+    100%{visibility: visible;position: static;}
+}

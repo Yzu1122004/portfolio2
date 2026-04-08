@@ -1,0 +1,107 @@
+*{
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+.biganimated{
+    height: 100%;
+    width: 100%;
+    background-image: url('../13imgs/海中途.png');
+    background-position:right;
+    background-size: cover;
+    background-repeat:no-repeat;
+    animation-iteration-count:1;
+    animation: bigbg 7s ;
+    animation-fill-mode:forwards;
+}
+.allani{
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.whale{
+    position: absolute;
+    height: 100%;
+    width: 45%; 
+    right: 5%;
+    top:-7%;
+    animation-iteration-count:1,infinite;
+    animation-delay: 0s,7s;
+    animation-duration:7s,6s ;
+    animation-name:whalesw1 ,updown ;
+
+}
+.yfish{
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    left: 5%;
+    top:-7%;
+    animation-iteration-count:1,infinite;
+    animation-delay: 0s,7s;
+    animation-duration:7s,4s ;
+    animation-name:yfish,updown;
+}
+.mark{
+    position: absolute;
+    height: 20%;
+    width: 5%;
+    right: 42%;
+    top:-25%;
+    animation-iteration-count:1;
+    animation:mark 1s;
+    opacity: 0;
+    animation-fill-mode:forwards;
+    animation-delay: 6.5s;
+}
+.point{
+    position: absolute;
+    height: 20%;
+    width: 8%;
+    left: 10%;
+    bottom: 10%;
+    animation-iteration-count:1;
+    animation:mark 1s;
+    opacity: 0;
+    animation-fill-mode:forwards;
+    animation-delay: 6.5s;
+}
+.whalea{
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    bottom: 30%;
+}
+img{
+
+    width: 100%;
+}
+@keyframes whalesw1{
+    0%{right:-40%;top:-10%;}
+    55%{top:10%;}
+    100%{right:5%;top:-7%;}
+}
+@keyframes bigbg{
+    0%{ background-position:right;}
+    100%{ background-position:left;}
+}
+@keyframes yfish{
+    0%{left:-100%;top:-10%;}
+    55%{top:10%;}
+    100%{left:5%;top:-7%;}
+}
+@keyframes mark{
+    0%{ opacity: 100%;}
+    50%{ opacity: 0%;}
+    100%{ opacity: 100%;}
+}
+@keyframes mark{
+    0%{ opacity: 100%;}
+    50%{ opacity: 0%;}
+    100%{ opacity: 100%;}
+}
+@keyframes updown{
+    0%{ top:-7%;}
+    50%{ top:0%;}
+    100%{ top:-7%;}
+}

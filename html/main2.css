@@ -1,0 +1,475 @@
+.msec{
+    background-image: url('../13imgs/海2w.png');
+    background-size:cover;
+    height: 33.33%;
+    background-position: center;
+}
+.pblock{
+    width: 100%;
+    height: 4vw;
+    background:linear-gradient(#0071f5, rgba(0, 168, 224,0.5));
+}
+.bubble{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 0;
+    transform:translateZ(0%);
+}
+.bubble li{
+    position:absolute;
+    list-style:none;
+    display:block;
+    background:rgba(255,255,255,0.2);
+    bottom:-100px; 
+    animation:bubble-ani 20s linear infinite ;
+    border-radius:100%;
+    font-size: 10%;
+}
+.bubble li:before {
+    position: absolute;
+    left: 20%;
+    top: 21%;
+    width: 25%;
+    content: '';
+    background: rgba(255,255,255,0.2);
+    display: block;
+    height: 25%;
+    border-radius: 100%;
+}
+.bubble li:nth-child(1){
+    width:20px;
+    height:20px;
+    left:15%;
+    animation-duration:7s;
+}
+.bubble li:nth-child(2){
+    width:15px;
+    height:15px;
+    left:40%;
+    animation-duration:13s;
+    animation-delay:2s;
+}
+.bubble li:nth-child(3){
+    width:25px;
+    height:25px;
+    left:30%;
+    animation-duration:18s;
+    animation-delay:3.5s;
+}
+.bubble li:nth-child(4){
+    width:10px;
+    height:10px;
+    left:55%;
+    animation-duration:23s;
+    animation-delay:1.5s;
+}
+.bubble li:nth-child(5){
+    width:18px;
+    height:18px;
+    left:90%;
+    animation-duration:10s;
+    animation-delay:5s;
+}
+.bubble li:nth-child(6){
+    width:20px;
+    height:20px;
+    left:10%;
+    animation-delay:1s;
+}
+.bubble li:nth-child(7){
+    width:15px;
+    height:15px;
+    left:75%;
+    animation-duration:8s;
+}
+.bubble li:nth-child(8){
+    width:25px;
+    height:25px;
+    left:65%;
+    animation-duration:12s;
+    animation-delay:2s;
+}
+.bubble li:nth-child(9){
+    width:10px;
+    height:10px;
+    left:50%;
+    animation-duration:30s;
+    animation-delay:2.5s;
+}
+.bubble li:nth-child(10){
+    width:18px;
+    height:18px;
+    left:20%;
+    animation-duration:25s;
+    animation-delay:4s;
+}
+.bubble li:nth-child(11){
+    width:8px;
+    height:8px;
+    left:5%;
+    animation-duration:25s;
+    animation-delay:0.7s;
+}
+.bubble li:nth-child(12){
+    width:11px;
+    height:11px;
+    left:93%;
+    animation-duration:20.5s;
+    animation-delay:1.3s;
+}
+.whyword{
+    text-align: center;
+    width: 20%;
+    margin-left: 40%;
+    font-size:1.2vw;
+    font-weight: bold;
+    padding: 1%;
+    color: #eaff62;
+}
+.whywordh{
+    border:0;
+    background: linear-gradient(currentColor, currentColor) no-repeat center;
+    background-size: calc(100% - 1em - 6px) 1px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.whywordh::before,
+.whywordh::after {
+    content: '';
+    display: block;
+    width: .50em; height: .50em;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    border: 1px solid;
+    margin: 3px;
+}
+.whymanga{
+    position: absolute;
+    height: 77%;
+    width: 40%;
+    border: 1.5px solid black;
+    z-index: 999;
+    bottom: -87%;
+    left: 30%;
+    background-color:  rgba(255, 255, 255, 0.5);
+}
+.whyimg{
+    position: absolute;
+    background-size: cover;
+    background-position:center ;
+    transition: .5s;
+    padding: 5px;
+}
+.why1{
+    background-image: url('../13imgs/manga1.png');
+    width: 49%;
+    height: 20%;
+    right: 1%;
+    top: 1%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+}
+.why2{
+    background-image: url('../13imgs/manga3.png');
+    clip-path: polygon(0 0, 100% 0, 100% 57%, 14% 100%);
+    width: 43%;
+    height: 21%;
+    right: 1%;
+    top: 22%;
+}
+.why3{
+    background-image: url('../13imgs/manga2.png');
+    clip-path: polygon(0 0, 80% 0, 100% 70%, 0 100%);
+    width: 60%;
+    height: 60%;
+    left: 1%;
+    top: 1%;
+    background-position:center ;
+}
+.why4{
+    background-image: url('../13imgs/藻類.jpg');
+    width: 98%;
+    height: 30%;
+    right: 1%;
+    top: 35%;
+    clip-path: polygon(0 91%, 100% 0, 100% 100%,0 100%);
+}
+.why5{
+    width: 57%;
+    height: 33%;
+    right: 1%;
+    bottom: 1%;
+    background-image: url('../13imgs/manga5.png');
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+.why6{
+    width: 56%;
+    height: 33%;
+    left: 1%;
+    bottom: 1%;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    background-image: url('../13imgs/MANGENG.png');
+}
+.why1 .whycontent{
+    position: absolute;
+    right: 5px;
+}
+.why2 .whycontent{
+    position: absolute;
+    right:  5px;
+}
+.why4 .whycontent{
+    position: absolute;
+    right:  5px;
+    bottom:  5px;
+}
+.why5 .whycontent{
+    position: absolute;
+    right:  5px;
+}
+.whycontent{
+    background-color:rgba(236, 236, 184,0.8) ;
+    border-radius:100%;
+    width: fit-content;
+    padding: 2px;
+    width: 20px;
+    text-align: center;
+    transition: .5s;
+}
+.whyimg:hover{
+    clip-path:none;
+    z-index: 999;
+    border: 1px solid black;
+}
+.whyimg:hover ~ .mmask{
+   display: block;
+}
+.explain{
+    padding: 1%;
+    opacity: 0;
+    transition: .5s;
+    letter-spacing: -10px;
+    color: #f6ffde;
+    font-size: 1.2vw;
+}
+.whyimg:hover .explain{
+    opacity: 1;
+    letter-spacing: 1px;
+}
+.whyimg:hover .whycontent{
+    opacity: 0;
+}
+.why1:hover{
+    width:59% ;
+    height: 30%;
+}
+.why2:hover{
+    width:53% ;
+    height: 31%;
+}
+.why3:hover{
+    width:70% ;
+    height: 70%;
+}
+.why4:hover{
+    width:98% ;
+    height: 40%;
+}
+.why5:hover{
+    width:67% ;
+    height: 43%;
+}
+.why6:hover{
+    width:76% ;
+    height: 43%;
+}
+.mbox{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.mwhale1{
+    width: 25%;
+}
+.mfish{
+    width: 10%;
+}
+.mupup{
+    width: 100%;
+}
+.mupee{
+    width: 10%;
+}
+.mgreen{
+    transition: .5s;
+    width: 255.3%;
+    top:-13% ;
+    left: -80%;
+}
+.mplakton{
+    transition: .5s;
+    width: 255.3%;
+    top:-13% ;
+    left: -80%;
+}
+.mbubble{
+    position: absolute;
+    opacity: 0;
+}
+.why1:hover ~ .mwhale1{
+    animation:m1w 4s 1 forwards;
+}
+.why1:hover ~ .mfish{
+    animation:m1f 2s 1 forwards 2s;
+}
+.why3:hover ~ .mwhale1{
+    transform:rotate(70deg);
+    animation:m2w 2s 1 forwards ;
+}
+.why3:hover ~ .mupup{
+    animation:m2up 2s 1 forwards 1.5s;
+}
+.why2:hover ~ .mwhale1{
+    transform:scaleX(-1);
+    animation:m3w 2s 1 forwards ;
+}
+.why2:hover ~ .mpee{
+    animation:m3pee 2s 1 forwards 1s;
+}
+.why4:hover ~ .mgreen{
+    opacity: 80%;
+}
+.why4:hover ~ .mplakton{
+    opacity: 1;
+    animation:m4p 10s infinite forwards ;
+}
+
+.mmask{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(111, 111, 111,0.5);
+    position: absolute;
+    display: none;
+
+}
+@keyframes bubble-ani {
+    0%{
+      -webkit-transform:translateY(0%);
+      transform:translateY(0%);
+    }
+    100%{
+      -webkit-transform:translateY(-110vh);
+      transform:translateY(-110vh);
+    }
+}
+@keyframes m1w {
+    0%{
+        right:  -70%;
+        bottom: -20%;
+    }
+    10%{
+        opacity: 100%;
+    }
+    30%{
+        bottom: -15%;
+    }
+    100%{
+        right:  20%;
+        bottom: -18%;
+        opacity: 100%;
+    }
+}
+@keyframes m1f {
+    0%{
+        bottom: -10%;
+        right:  65%;
+        opacity: 0%;
+    }
+    30%{
+        bottom: -10%;
+        right:  65%;
+        opacity: 100%;
+    }
+    100%{
+        right:  65%;
+        bottom: -18%;
+        opacity: 100%;
+    }
+}
+@keyframes m2w {
+    0%{
+        left:   -50%;
+        bottom: -20%;
+    }
+    10%{
+        opacity: 100%;
+    }
+    30%{
+        left:   -45%;
+    }
+    100%{
+        left:   -50%;
+        bottom: 50%;
+        opacity: 100%;
+    }
+}
+@keyframes m2up {
+    0%{
+        left:   -90%;
+        bottom: 10%;
+    }
+    10%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 100%;
+        left:   -90%;
+        bottom: 10%;
+    }
+}
+@keyframes m3w {
+    0%{
+        left:   -70%;
+        top: -10%;
+    }
+    10%{
+        opacity: 100%;
+    }
+    30%{
+        top:-5%;
+    }
+    100%{
+        left:  -10%;
+        top: -10%;
+        opacity: 100%;
+    }
+}
+@keyframes m3pee {
+    0%{
+        left:   -50%;
+        top: -10%;
+    }
+    10%{
+        opacity: 10%;
+    }
+    100%{
+        left:  -60%;
+        top: -10%;
+        opacity: 100%;
+    }
+}
+@keyframes m4p {
+    0%{
+        top:-13% ;
+    }
+    50%{
+        top:-11% ;
+    }
+    100%{
+        top:-13% ;
+    }
+}
