@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>蔚藍復興</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer2.css">
+    <script src="script2.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js'></script>
+    <script>
+        var VisibleMenu = '';
+        function switchMenu(theMainMenu, theSubMenu, theEvent) {
+            var SubMenu = document.getElementById(theSubMenu);
+            if (SubMenu.style.display == 'none') {
+                SubMenu.style.minWidth = theMainMenu.clientWidth;
+                SubMenu.style.display = 'block';
+                hideMenu();
+                VisibleMenu = theSubMenu;
+            }
+            else {
+                if (theEvent != 'MouseOver' || VisibleMenu != theSubMenu) {
+                    SubMenu.style.display = 'none';
+                    VisibleMenu = '';
+                }
+            }
+        }
+        function hideMenu() {
+            if (VisibleMenu != '') {
+                document.getElementById(VisibleMenu).style.display = 'none';
+            }
+            VisibleMenu = '';
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <a class="ha" href="../index.html">
+                <h1>蔚藍復興</h1>
+            </a>
+            <div class="img"><img src="./image/圖層 1.png" height="100%" alt=""></div>
+        </div>
+        <div class="title2">
+            <span class="main-menu">
+                <a class="ha" href="../html/main.html">首頁</a>
+            </span>
+            <span class="main-menu">
+                <a class="ha" href="../為何鯨魚重要/index.html">鯨魚為何重要</a>
+            </span>
+            <span class="main-menu" onmouseover="switchMenu( this, 'SubMenu1', 'MouseOver' )" onmouseout="hideMenu()">
+                鯨魚的危機<span style="font-size:9px;">&#9660;</span>
+                <ul id="SubMenu1" class="sub-menu" style="display:none;">
+                    <li><a href="../商業捕鯨/owo2.html">商業捕鯨</a></li>
+                    <li><a href="../汙染/owo.html">汙染與混獲</a></li>
+                </ul>
+            </span>
+            <span class="main-menu" onmouseover="switchMenu( this, 'SubMenu2', 'MouseOver' )" onmouseout="hideMenu()">
+                保育活動<span style="font-size:9px;">&#9660;</span>
+                <ul id="SubMenu2" class="sub-menu" style="display:none;">
+                    <li><a href="../保育活動資料庫/index.html">資料庫建設</a></li>
+                    <li><a href="../活動/index.html">友善賞鯨</a></li>
+                </ul>
+            </span>
+            <span class="main-menu">
+                <a class="ha" href="../鯨魚網站成員介紹/index.html">成員介紹</a>
+            </span>
+        </div>
+    </header>
+    <div class="boat"></div>
+    <main>
+        <div class="sky">
+            <div class="skyimg">
+                <div class="skybg"></div>
+                <div class="cloud"></div>
+                <div class="bird"></div>
+                <div class="bird2"></div>
+                <div class="cloud2"></div>
+                <div class="sun"></div>
+            </div>
+            <div class="skytext">
+                <h1>商業捕鯨</h1>
+                <p>商業捕鯨是指為了經濟利益而進行的捕捉鯨類的活動。在過去，鯨脂、鯨油和其他鯨產品被用於製造照明、潤滑劑、化妝品等產品，因此捕鯨曾是一個重要的商業活動。然而，隨著對鯨類保護意識的提高和國際法律的制定，許多國家已經停止了商業捕鯨活動，而且商業捕鯨在全球範圍內受到了嚴格的限制和監管。
+                </p>
+            </div>
+            <div class="sea">
+                <div class="wave"></div>
+                <div class="wave2"></div>
+                <div class="whale"></div>
+                <div class="seatext">
+                    <p>工業革命的發展導致捕鯨行業活動進一步擴大和系統化。隨著工業技術的進步，捕鯨船變得更加先進，並且能夠遠航到更遠的海域。這導致了對鯨類資源的過度開發和過度捕捞。鯨類的數量急劇減少甚至瀕臨滅絕。
+                    </p>
+                    <p>直到了1982年國際捕鯨委員會通過《全球禁止捕鯨公約》但允許捕鯨用於科學研究。<br><br>1986年國際《禁止捕鯨公約》生效後，世界各國宣布放棄商業捕鯨，包括日本。但當時有7國投票反對這一提案，分別為巴西、冰島、日本、挪威、秘魯、韓國和蘇聯。中國投棄權票。直到現今還會有一些國家同意獵捕鯨魚。
+                    </p>
+                    <div class="line">
+                        <iframe src="https://e.infogram.com/-9209276238339831?src=embed" title="世界獵捕鯨魚種類年變化圖"
+                            width="600vw" height="600vh" scrolling="no" frameborder="0" style="border:none;"
+                            allowfullscreen="allowfullscreen">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="fg">
+            <div class="f fh">
+                <a class="ha" src="../index.html"><h1>蔚藍復興</h1></a>
+                <div class="imgf"><img src="../13imgs/圖層 1.png" width="100%" alt=""></div>
+            </div>
+            <div class="f fp">
+                <p>
+                    地址 | 970064 花蓮市中美路170號<br>
+                    信箱 | kuroshio@koef.org<br>
+                    電話 | 03-8246-700、03-8246-902<br>
+                    傳真 | 03-8246-717
+                </p>
+            </div>
+            <div class="f fp">
+                <p>
+                    立案字號 | 八七府教社字第033027號<br>
+                    統一編號 | 73761619<br>
+                    勸募許可文號 | 衛部救字第1131360553號<br>
+                    發票愛鯨捐 | 59427
+                </p>
+            </div>
+            <div class="f fp">
+                <p>
+                    聯絡我們<br>
+                    隱私權政策<br>
+                </p>
+            </div>
+        </div>
+        <hr class="fhr">
+        <div class="fl">
+            Copyright © 2019 Kuroshio Ocean Education Foundation
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,544 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "LXGW WenKai Mono TC", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+.sky {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.skyimg {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.skytext {
+  height: 80vh;
+  width: 80vw;
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  z-index: 3;
+  animation: skytextrun 5s forwards;
+}
+
+.skytext h1 {
+  width: 40vw;
+  font-size: 4vw;
+}
+
+.skytext p {
+  width: 40vw;
+  font-size: 1.5vw;
+}
+
+.skybg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(./image/天空背景.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.cloud {
+  height: 100%;
+  width: 100%;
+  background-image: url(./image/雲.png);
+  background-size: 100%;
+  background-repeat: repeat-x;
+  overflow: hidden;
+  position: absolute;
+  top: 5vh;
+  z-index: 3;
+  animation: 70s ease-in-out infinite cloudrun;
+}
+
+.cloud2 {
+  height: 100%;
+  width: 100%;
+  background-image: url(./image/雲2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  z-index: 4;
+  animation: owo 5s forwards, owo2 8s 5s ease infinite;
+}
+
+.bird {
+  height: 20%;
+  width: 100%;
+  background-image: url(./image/海鷗.png);
+  background-size: 15%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  z-index: 3;
+  animation: 50s ease infinite birdrun;
+}
+
+.bird2 {
+  height: 20%;
+  width: 100%;
+  background-image: url(./image/海鷗.png);
+  background-size: 15%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  z-index: 3;
+  animation-delay: 10s;
+  animation: 45s ease infinite birdrun;
+}
+
+.sun {
+  height: 20vw;
+  width: 20vw;
+  background-image: url(./image/太陽.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  top: 6vh;
+  right: 15vw;
+  z-index: 2;
+  animation: 100s infinite sundeg;
+}
+
+.sea {
+  width: 100%;
+  height: 230%;
+  position: absolute;
+  background-image: linear-gradient(to top, #33afdd 85%, #3487a5);
+  display: flex;
+  overflow: hidden;
+}
+
+.wave {
+  width: 100%;
+  height: 10%;
+  background-repeat: repeat-x;
+  background-image: url(./image/浪1.png);
+  background-size: 100%;
+  background-position: bottom;
+  overflow: hidden;
+  position: absolute;
+  top: 2vh;
+  animation: 30s infinite wave1;
+  z-index: 6;
+}
+
+.wave2 {
+  width: 100%;
+  height: 10%;
+  background-image: url(./image/浪2.png);
+  background-size: 100%;
+  background-position: bottom;
+  overflow: hidden;
+  position: absolute;
+  top: 8.5vh;
+  background-repeat: repeat-x;
+  animation: 30s infinite wave2;
+  z-index: 8;
+}
+
+.boat {
+  width: 40vw;
+  height: 45vh;
+  background-image: url(./image/船1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  overflow: hidden;
+  position: absolute;
+  bottom: -12%;
+  z-index: 5;
+  animation: boatin 8s ease forwards, boatupdown 4.5s ease infinite;
+  left: -40%;
+}
+
+.boat2 {
+  width: 52vw;
+  height: 45vw;
+  background-image: url(./image/網子.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  animation: boatin2 3s ease forwards, boatupdown2 4.5s ease infinite;
+}
+
+@keyframes boatupdown2 {
+  0% {
+    bottom: -21vw;
+  }
+
+  50% {
+    bottom: -19vw;
+  }
+
+  100% {
+    bottom: -21vw;
+  }
+}
+
+@keyframes boatin2 {
+  from {
+    transform: translateX(38%);
+  }
+
+  to {
+    transform: translateX(75%);
+  }
+}
+
+.whale {
+  width: 25%;
+  height: 50%;
+  background-image: url(./image/鯨魚.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  position: absolute;
+  top: -75vh;
+  left: 70%;
+  z-index: 7;
+  animation: whalerun 20s infinite;
+}
+
+.whale2 {
+  width: 25%;
+  height: 50%;
+  background-image: url(./image/鯨魚.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  position: absolute;
+  top: -80vh;
+  left: 40%;
+  z-index: 9;
+  animation: whalerun2 20s infinite, bow 100s infinite;
+}
+@keyframes whalerun2 {
+  0% {
+    left:40%;
+  }
+
+  25% {
+    transform: rotateY(0deg);
+  }
+
+  40% {
+    transform: rotateY(180deg);
+    left: 75%;
+  }
+
+  65% {
+    transform: rotateY(180deg);
+  }
+
+  75% {
+    transform: rotateY(0deg);
+    left: 0%;
+  }
+  100%{
+    left:40%;
+  }
+}
+@keyframes bow{
+ 0%{
+  top:-80vh;
+ }
+ 35%{
+  top:26vh;
+ }
+ 50%{
+  top:56vh;
+ }
+ 75%{
+  top:100vh;
+ }
+ 100%{
+  top:-80vh;
+ }
+}
+.seatext {
+  position: absolute;
+  top: 50vh;
+  left: 10vw;
+  height: 40vh;
+  width: 40vw;
+}
+
+.line {
+  position: absolute;
+  top: 90vh;
+  overflow: hidden;
+  right: -230%;
+}
+
+.linein {
+  animation: linerun 4s ease-in-out forwards;
+}
+
+.lineout {
+  animation: linego 3s ease-in-out forwards;
+}
+
+.seatext p:nth-child(1) {
+  font-size: 1.5vw;
+  width: 100%;
+  left: 0%;
+  position: absolute;
+
+}
+
+.seatext p:nth-child(2) {
+  font-size: 1.5vw;
+  width: 100%;
+  top: 50vh;
+  left: -200%;
+  position: absolute;
+}
+
+.textin {
+  animation: textrun 4s ease forwards;
+}
+
+.textout {
+  animation: textgo 3s ease forwards;
+}
+
+@keyframes owo {
+  from {
+    top: 0;
+    background-size: 100% 100%;
+  }
+
+  to {
+    top: 70%;
+    background-size: 100% 40%;
+  }
+}
+
+@keyframes owo2 {
+  0% {
+    top: 70%;
+  }
+
+  50% {
+    top: 65%;
+  }
+
+  100% {
+    top: 70%;
+  }
+}
+
+@keyframes sundeg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wave2 {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 15vw 0;
+  }
+}
+
+@keyframes wave1 {
+  from {
+    background-position: 30vw 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes boatupdown {
+  0% {
+    bottom: -6vh;
+  }
+
+  50% {
+    bottom: -8vh;
+  }
+
+  100% {
+    bottom: -6vh;
+  }
+}
+
+@keyframes boatin {
+  from {
+    left: -40%;
+  }
+
+  to {
+    left: 30%;
+  }
+}
+
+@keyframes cloudrun {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100vw 0;
+  }
+}
+
+@keyframes whalerun {
+  0% {
+    transform: rotateY(180deg);
+    left: 75%;
+  }
+
+  45% {
+    transform: rotateY(180deg);
+  }
+
+  50% {
+    transform: rotateY(0deg);
+    left: 0%;
+  }
+
+  95% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+    left: 75%;
+  }
+}
+
+@keyframes textrun {
+  0% {
+    left: -200%;
+  }
+
+  95% {
+    left: 2%;
+  }
+
+  97% {
+    left: -1%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes textgo {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -200%;
+  }
+}
+
+@keyframes linerun {
+  0% {
+    right: -230%;
+  }
+
+  95% {
+    right: -99%;
+  }
+
+  97% {
+    right: -103%;
+  }
+
+  100% {
+    right: -100%;
+  }
+}
+
+@keyframes linego {
+  0% {
+    right: -100%;
+  }
+
+  3% {
+    right: -99%;
+  }
+
+  5% {
+    right: -103%;
+  }
+
+  100% {
+    right: -230%;
+  }
+}
+
+@keyframes birdrun {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 130% 0;
+  }
+}
+
+@keyframes skytextrun {
+  0% {
+    left: -20vw;
+  }
+
+  95% {
+    left: 12vw;
+  }
+
+  97% {
+    left: 9vw;
+  }
+
+  100% {
+    left: 10vw;
+  }
+}
