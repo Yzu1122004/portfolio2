@@ -1,0 +1,79 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+}
+html,body
+{
+    height: 100%;
+    width: 100%;
+}
+header
+{
+    height: 10%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(188, 188, 188, 0.7), transparent 100%);
+    box-shadow:0 5px 5px -5px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+}
+.title
+{
+    margin-left: 10%;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.title2
+{
+    width: 50%;
+    text-align: right;
+    font-size: 120%;
+    display: flex;
+    justify-content: space-between;
+}
+.ha{
+    color:black;
+}
+.ha:hover{
+    color:rgb(39, 43, 255);
+}
+.hb{
+ height: 10%;
+}
+.black{
+    color: #000;
+}
+.main-menu {
+    color:#000000; padding:5px; margin:0px; cursor:pointer; display:inline-block; transition: all .5s;
+} 
+.main-menu:hover {
+     color:rgb(39, 43, 255); font-weight: bolder;
+}
+.sub-menu { 
+    color:#000000; background-color:rgba(238, 238, 238,0.8); margin:5px -5px; padding:0px; list-style-type:none; position:absolute;border-bottom:1px solid black ; 
+} 
+.sub-menu li { 
+    padding: 3px 5px; text-align:left; font-weight: bolder;
+} 
+.sub-menu li:hover { 
+    color:#FFFFFF; background-color:#0000FF;
+}
+.sub-menu a { 
+    text-align:left; display:block; text-decoration:none; color:#000000; 
+}
+.sub-menu a:hover { 
+    color:#FFFFFF; background-color:#0000FF; text-decoration:none;line-height: 200%; 
+}
+.img{
+    width: 16%;
+    margin-left: 1%;
+    height: 90%;
+    background-image: url("../13imgs/圖層\ 1.png");
+    background-size:cover ;
+}

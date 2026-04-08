@@ -1,0 +1,270 @@
+*{
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+main{
+    height: 350%;
+    background-color: rgb(142, 206, 255);
+}
+.telescope{
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    background-image: url("../13imgs/圖層\ 0.png");
+    background-size: 120%;
+    background-position: 55% 35%;
+    top:  0;
+    z-index: 999;
+}
+.boat{
+    width: 100%;
+    height: 80%;
+    background-image: url("../13imgs/F0A166AB-CCAC-4780-AABB-7C7FC186BF3F.png");
+    background-position: 50% 100%;
+    position: absolute;
+    bottom: -3%;
+    background-size: cover;
+    animation: bupdown 6s infinite;
+}
+.whaleBg{
+    height:100vh ;
+    width: 100%;
+    position: sticky;
+    background-image: url(../13imgs/S__47218702.jpg);
+    background-position: top;
+    background-size: cover;
+    top: 0;
+    z-index: 998;
+}
+.whaleBg0{
+    height:100vh ;
+    width: 100%;
+    position: sticky;
+    background-image: url(../13imgs/S__47218702.jpg);
+    background-position: top;
+    background-size: cover;
+    top: 0;
+    z-index: 998;   
+    overflow: hidden;
+}
+.whaleBg0 div{
+    transform: scale(2);
+}
+.container{
+    height: 250vh;
+    width: 100%;
+    position: absolute;
+}
+.containerBg{
+    height: 350%;
+    width: 100%;
+    position: absolute;
+}
+.content{
+    margin-left: 10%;
+    width: 80%;
+    height: 340%;
+    position: absolute;
+    top:10%;
+    z-index: 9999;
+    padding: 10px;
+}
+.wbox{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: aliceblue;
+}
+.maskbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(199, 199, 199,0.3);
+}
+.content h1{
+    margin: 2%;
+}
+.content h2{
+    margin: 1%;
+}
+h3{
+    margin: 1%;
+}
+.aboutj li{
+    margin-left: 10%;
+}
+.aboutj{
+    width: 100%;
+    font-size: 120%;
+    line-height: 150%;
+}
+.lside{
+    width: 75%;
+    float: left;
+    color: #ffffff;
+}
+.lside p{
+    font-size: 120%;
+    line-height: 150%; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.img4{
+    width: 65%;
+    display: flex;
+    
+}
+.in0{
+    height: 46%;
+    width: 46%;
+    text-align: center;
+    margin:3% ;
+}
+.rside{
+    text-shadow:none;
+
+    width: 25%;
+    position: sticky;
+    top: 10%;
+    float: left;
+    margin-top: 49%;
+    padding: 0;
+    background-color: rgba(255, 255, 255,0.9);
+}
+.rside h2{
+    text-align: center;
+    background-color: black;
+    margin: 0%;
+    color: #ffffff;
+}
+.rside b{
+    font-size: 150%;
+}
+.inputs{
+    width: 100%;
+    height: 40px ;
+    margin-bottom: 3%;
+}
+.rside form{
+    margin: 3%;
+}
+.inputnum{
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+}
+.c1{
+    overflow: auto;
+    height: 480px;
+}
+.innum{
+    width: 60px;
+    height: 30px;
+    margin-left:auto ;
+    margin-right:15% ;
+}
+.inputnum p{
+    font-size: 110%;
+    line-height: 110%;
+}
+.inputnum s{
+    font-size: 80%;
+    color: rgba(137, 137, 137,0.8);
+}
+.inputnum B{
+    font-size: 111%;
+    color: rgba(48, 172, 255, 0.8);
+}
+#countnum{
+    font-size: 200%;
+    color: rgba(48, 172, 255, 0.8);
+}
+.info{
+    padding:3% 10%;
+    line-height: 180%;
+    background-color: rgba(250, 235, 215,0.3);
+    color: #000;
+    width: 99%;
+    height: 480px;
+    overflow: auto;
+    border-radius: 5px;
+}
+.seaimgs{
+    width: 73%;
+    height: 29%;
+    position: absolute;
+    bottom: 0;
+}
+.imgs5{
+    opacity: 0.8;
+    
+}
+.imgline1{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    gap: 1%;
+    margin-bottom: 1%;
+}
+.imgline2{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    gap: 1%;
+}
+.imgline2 p{
+    position: absolute;
+    right: 10%;
+    top: 70%;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 110%;
+}
+.wave{
+    background-image: url("../13imgs/S__47218702.png");
+    width: 100%;
+    height: 99%;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+.whale{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    bottom: 42%;
+    animation: wupdown 4s infinite;
+}
+
+@keyframes roll {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes wupdown {
+    0%{
+        bottom: 42%;
+        
+    }
+    50%{
+        bottom: 43%;
+
+    }
+    100%{
+        bottom: 42%;
+        
+    }
+}
+@keyframes bupdown {
+    0%{bottom: -3%;
+      
+        
+    }
+    50%{bottom: 0%;
+       
+
+    }
+    100%{bottom: -3%;
+     
+        
+    }
+}
+
